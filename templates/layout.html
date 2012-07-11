@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{% block title '' %} - My Silex Application</title>
+        <title>{% block title '' %}</title>
 
-        <link href="{{ app.request.basepath }}/css/main.css" rel="stylesheet" type="text/css" />
+        <link href="{{ app.request.basepath }}/css/bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href="{{ app.request.basepath }}/css/style.css" rel="stylesheet" type="text/css" />
 
         <script type="text/javascript">
             var _gaq = _gaq || [];
@@ -17,7 +18,116 @@
             })();
         </script>
     </head>
-    <body>
-        {% block content %}{% endblock %}
+    <body class="{% block body_class %}{% endblock %}">
+    {% block navbar %}
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container center">
+              <a class="btn btn-navbar" href="#" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
+              <a class="brand" href="./index.html"><img src="images/as_logoheader.png" class="logohead"></a>
+              <div class="nav-collapse">
+                <ul class="nav menu">
+                  <li><a href="/fr">home</a></li>
+                  <li><a href="http://www.antistatique.net/fr/portfolio.html" title="Portfolio - Nos créations web - webmarketing ainsi que nos applications GIS en un coup d'oeil.">Portfolio</a></li>
+                  <li class="active"><a href="http://www.antistatique.net/fr/solutions.html" title="Solutions - Antistatique.net vous présente ses solutions, webdesign, sites internet, CMS, symfony, GIS, webmarketing ...">Solutions</a></li>
+                  <li><a href="http://www.antistatique.net/fr/agence-web-interactive-lausanne.html" title="L'agence web interactive à Lausanne, Antistatique.net">L'agence</a></li>
+                  <li><a href="http://www.antistatique.net/fr/contact.html" title="Contact - Antistatique.net Sàrl, rue de Sébeillon 9b, Lausanne">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+    {% endblock %}
+        <header>
+            <div class="container center">
+                <div class="row">
+                    <div class="span12">
+                        <div id="myModal" class="modal hide fade" style="display: none; ">
+                            <form class="form-horizontal">
+                        <div class="modal-header">
+                          <a class="close" data-dismiss="modal">&times;</a>
+                          <h3>Demander un devis</h3>
+                        </div>
+                        <div class="modal-body">
+                            <fieldset>
+                                <div class="control-group">
+                                <label class="control-label" for="input01">Nom</label>
+                                <div class="controls">
+                                  <input type="text" class="input-xlarge" id="input01">
+                                  <p class="help-block">Obligatoire!</p>
+                                </div>
+                              </div>
+                               <div class="control-group">
+                                <label class="control-label" for="input01">E-Mail</label>
+                                <div class="controls">
+                                  <input type="text" class="input-xlarge" id="input02">
+                                  <p class="help-block">Obligatoire!</p>
+                                </div>
+                              </div>
+                              <div class="control-group">
+                                <label class="control-label" for="input01">T&eacute;l&eacute;phone</label>
+                                <div class="controls">
+                                  <input type="text" class="input-xlarge" id="input03">
+                                </div>
+                              </div>
+                              <div class="control-group">
+                                <label class="control-label" for="input01">Message</label>
+                                <div class="controls">
+                                  <textarea class="input-xlarge" id="textarea" rows="3"></textarea>
+                                  <p class="help-block">Obligatoire!</p>
+                                </div>
+                              </div>
+                            </fieldset>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="submit" href="#" class="btn-primary btn small">Send</button>
+                        </div>
+                      </form>
+                    </div>    
+                  </div>
+                </div>
+            {% block slider %}
+                <div class="row slider">
+                    <div class="span12 slide1">
+                        <img src="images/eshop_title_1.png" id='slide1' class="icon span4 show">
+                        <img src="images/eshop_title_2.png" id='slide2' class="icon span4 hide">
+                        <img src="images/eshop_title_3.png" id='slide3' class="icon span4 hide">
+                    </div>
+                    <div class="span6 offset5 headtext">
+                        <h1>Les e-shops c&rsquo;est monstre bien, on peut y acheter pleins de trucs avec sa carte de cr&eacute;dit !</h1>
+                        <p class="lead">Antistatique.net s'applique &agrave; d&eacute;velopper des applications mobile multi-plateforme. <a href="#">En savoir plus</a></p>
+                        <div class="button-ctr">
+                            <a data-toggle="modal" href="#myModal" class="btn-primary big">DEMANDER UN DEVIS</a>
+                        </div>
+                    </div>
+                    <div class="points">
+                        <ul>
+                            <li><a href="#" id="slide1" class="point active"><span>1</span></a></li>
+                            <li><a href="#" id="slide2" class="point"><span>2</span></a></li>
+                            <li><a href="#" id="slide3" class="point"><span>3</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            {% endblock %}
+            </div>
+        </header>
+        <div role="main">
+        {% block mainblock %}
+            
+        {% endblock %}
+        </div>
+        <footer>
+            <div class="container center">
+                <div class="logo">
+                    <a href="http://www.antistatique.net"><img src="images/as_logofoot.jpg" title="Antistatique.net"></a>
+                </div>
+            </div>
+        </footer>
+        <script src="{{ app.request.basepath }}/js/bootstrap.js"></script>
+        <script src="{{ app.request.basepath }}/js/script.js"></script>
     </body>
 </html>

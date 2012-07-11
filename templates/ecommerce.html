@@ -1,5 +1,134 @@
 {% extends "layout.html" %}
 
-{% block content %}
-    E-commerce.
+{% block title %}
+    
+{% endblock %}
+
+{% block body_class %}
+    eshop
+{% endblock %}
+
+{% block slider %}
+    <div class="row slider">
+		<div class="span12 slide1">
+			<img src="images/eshop_title_1.png" id='slide1' class="icon span4 show">
+			<img src="images/eshop_title_2.png" id='slide2' class="icon span4 hide">
+			<img src="images/eshop_title_3.png" id='slide3' class="icon span4 hide">
+		</div>
+		<div class="span6 offset5 headtext">
+			<h1>Les e-shops c&rsquo;est monstre bien, on peut y acheter pleins de trucs avec sa carte de cr&eacute;dit !</h1>
+			<p class="lead">Antistatique.net s'applique &agrave; d&eacute;velopper des applications mobile multi-plateforme. <a href="#">En savoir plus</a></p>
+			<div class="button-ctr">
+				<a data-toggle="modal" href="#myModal" class="btn-primary big">DEMANDER UN DEVIS</a>
+			</div>
+		</div>
+		<div class="points">
+			<ul>
+				<li><a href="#" id="slide1" class="point active"><span>1</span></a></li>
+				<li><a href="#" id="slide2" class="point"><span>2</span></a></li>
+				<li><a href="#" id="slide3" class="point"><span>3</span></a></li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+
+{% block mainblock %}
+    <section id="explication">
+		<div class="container center">
+			<div class="row">
+				<div class="span4">
+					<div class="rect">
+						<h2>SHOPPING</h2>
+						<img src="http://placehold.it/350x200">
+						<p>Nous d&eacute;veloppons des applications web mobile, des sites internet aux interfaces &eacute;volu&eacute;es et optimis&eacute;es pour les tablettes tactiles (iPad, Galaxy tab) et les smartphone (iPhone, Android, BlackBerry).</p>
+					</div>
+				</div>
+				<div class="span4">
+					<div class="rect">
+						<h2>SHOPPING</h2>
+						<img src="http://placehold.it/350x200">
+						<p>Nous d&eacute;veloppons des applications web mobile, des sites internet aux interfaces &eacute;volu&eacute;es et optimis&eacute;es pour les tablettes tactiles (iPad, Galaxy tab) et les smartphone (iPhone, Android, BlackBerry).</p>
+					</div>
+				</div>
+				<div class="span4">
+					<div class="rect">
+						<h2>SHOPPING</h2>
+						<img src="http://placehold.it/350x200">
+						<p>Nous d&eacute;veloppons des applications web mobile, des sites internet aux interfaces &eacute;volu&eacute;es et optimis&eacute;es pour les tablettes tactiles (iPad, Galaxy tab) et les smartphone (iPhone, Android, BlackBerry).</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="examples">
+		<div class="container center">
+			<div class="row">
+				<div class="span8 offset1 main">
+					<a href="#" rel="popover" data-content="E-Shop pour le traiteur japonais Uchitomi" data-original-title="Uchitomi"><img src="images/uchitomi_big.jpg"></a>
+				</div>
+				<div class="span2">
+					<img src="http://placehold.it/200x200">
+					<img src="http://placehold.it/200x200">
+					<img src="http://placehold.it/200x200">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="interest">
+		<div class="container center">
+			<div class="row">
+				<div class="span12">
+					<div id="myModal2" class="modal hide fade" style="display: none; ">
+						<form class="form-horizontal">
+			        <div class="modal-header">
+			          <a class="close" data-dismiss="modal">&times;</a>
+			          <h3>Demander un devis</h3>
+			        </div>
+			        <div class="modal-body">
+			        	<fieldset>
+				        	<div class="control-group">
+				            <label class="control-label" for="input01">Nom</label>
+				            <div class="controls">
+				              <input type="text" class="input-xlarge" id="input01">
+				              <p class="help-block">Obligatoire!</p>
+				            </div>
+				          </div>
+				           <div class="control-group">
+				            <label class="control-label" for="input02">E-Mail</label>
+				            <div class="controls">
+				              <input type="text" class="input-xlarge" id="input02">
+				              <p class="help-block">Obligatoire!</p>
+				            </div>
+				          </div>
+				          <div class="control-group">
+				            <label class="control-label" for="input03">T&eacute;l&eacute;phone</label>
+				            <div class="controls">
+				              <input type="text" class="input-xlarge" id="input03">
+				            </div>
+				          </div>
+				          <div class="control-group">
+				            <label class="control-label" for="textarea">Message</label>
+				            <div class="controls">
+				              <textarea class="input-xlarge" id="textarea" rows="3"></textarea>
+				              <p class="help-block">Obligatoire!</p>
+				            </div>
+				          </div>
+			  			</fieldset>
+			        </div>
+			        <div class="modal-footer">
+			          <button type="submit" href="#" class="btn-primary btn small">Send</button>
+			        </div>
+			      </form>
+			    </div>    
+			  </div>
+			<div class="row">
+				<div class="span6 offset3 ctr">
+					<h2>Int&eacute;ress&eacute; ?</h2>
+					<p class="info">Ou besoin de plus d&rsquo;informations ?</p>
+					<a data-toggle="modal" href="#myModal2" class="btn-primary">CLIQUEZ-ICI!</a>
+				</div>
+			</div>
+		</div>
+	</section>
 {% endblock %}

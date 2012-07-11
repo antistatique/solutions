@@ -1,5 +1,140 @@
 {% extends "layout.html" %}
 
-{% block content %}
-    Mobile.
+{% block slider %}
+    <div class="row">
+		<div class="icon">
+			<div class="iphone">
+				<div class="iphonecontent">
+					<div id="slide1_container">
+						<div id="slide1_images">
+							<img src="images/screen1.jpg">
+							<img src="images/screen2.jpg">
+							<img src="images/screen3.jpg">
+							<img src="images/screen4.jpg">
+							<img src="images/screen5.jpg">			
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="span6 offset5 headtext">
+			<h1>Le mobile n'est plus une option, il repr&eacute;sente d&eacute;j&agrave; 30% de votre audience cette ann&eacute;e !</h1>
+			<p class="lead">Antistatique.net s'applique &agrave; d&eacute;velopper des applications mobile multi-plateforme. <a href="#">En savoir plus</a></p>
+			<div class="button-ctr">
+				<a data-toggle="modal" href="#myModal" class="btn-primary big">DEMANDER UN DEVIS</a>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block mainblock %}
+    <section id="explication">
+		<div class="container center">
+			<div class="row">
+				<div class="span4">
+					<h2>MULTI-PLATEFORMES</h2>
+					<img src="images/multi.jpg" alt="">
+					<p>Afin de mettre en place la strat&eacute;gie e-marketing, nous fixons des objectifs clairs et pr&eacute;cis. Mise en place d'un concept original afin d'atteindre vos objectifs.</p>
+				</div>
+				<div class="span4">
+					<h2>L'AIRE DU TACTILE</h2>
+					<img src="images/tactile.jpg" alt="">
+					<p>Nous utilisons le framework Secha Touch, une bo&icirc;te &agrave; outil permettant d'offriraux utilisateurs de l'application web, uneexp&eacute;rience riche, interactive et intuitive.</p>
+				</div>
+				<div class="span4">
+					<h2>DISTRIBUTION</h2>
+					<img src="images/distribution.jpg" alt="">
+					<p>Selon vos souhait, nous distribuons l'application sur les magasins d'application (AppStore, Android Market) ou simplement via Internet (pour les applications m&eacute;tier &agrave; usage interne)</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="examples">
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<h2>QUELQUES EXEMPLES</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span6">
+					<div class="row-fluid">
+						<div class="span6"><img src="images/app1.jpg" alt=""></div>
+						<div class="span6">
+							<h3>MULTI-PLATEFORMES</h3>
+							<p>Application web iPad et Android Galaxy Tab pour les courtiers</p>
+							<button>EN SAVOIR PLUS</button>
+						</div>
+					</div>
+				</div>
+				<div class="span6">
+					<div class="row-fluid">
+						<div class="span6"><img src="images/app2.jpg" alt=""></div>
+						<div class="span6">
+							<h3>Face &agrave; Face</h3>
+							<p>Application de r&eacute;servation pour les clients du salon Face A Face &agrave; Lausanne</p>
+							<button>EN SAVOIR PLUS</button>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</section>
+
+	<section id="interest">
+		<div class="container center">
+			<div class="row">
+				<div class="span12">
+					<div id="myModal2" class="modal hide fade" style="display: none; ">
+						<form class="form-horizontal">
+			        <div class="modal-header">
+			          <a class="close" data-dismiss="modal">&times;</a>
+			          <h3>Demander un devis</h3>
+			        </div>
+			        <div class="modal-body">
+			        	<fieldset>
+				        	<div class="control-group">
+				            <label class="control-label" for="input01">Nom</label>
+				            <div class="controls">
+				              <input type="text" class="input-xlarge" id="input01">
+				              <p class="help-block">Obligatoire!</p>
+				            </div>
+				          </div>
+				           <div class="control-group">
+				            <label class="control-label" for="input02">E-Mail</label>
+				            <div class="controls">
+				              <input type="text" class="input-xlarge" id="input02">
+				              <p class="help-block">Obligatoire!</p>
+				            </div>
+				          </div>
+				          <div class="control-group">
+				            <label class="control-label" for="input03">T&eacute;l&eacute;phone</label>
+				            <div class="controls">
+				              <input type="text" class="input-xlarge" id="input03">
+				            </div>
+				          </div>
+				          <div class="control-group">
+				            <label class="control-label" for="textarea">Message</label>
+				            <div class="controls">
+				              <textarea class="input-xlarge" id="textarea" rows="3"></textarea>
+				              <p class="help-block">Obligatoire!</p>
+				            </div>
+				          </div>
+			  				</fieldset>
+			        </div>
+			        <div class="modal-footer">
+			          <button type="submit" href="#" class="btn-primary btn small">Send</button>
+			        </div>
+			      </form>
+			    </div>    
+			  </div>
+			<div class="row">
+				<div class="span6 offset3 ctr">
+					<h2>Int&eacute;ress&eacute;?</h2>
+					<p class="info">Ou besoin de plus d&rsquo;informations ?</p>
+					<a data-toggle="modal" href="#myModal2" class="btn-primary">CLIQUEZ-ICI!</a>
+				</div>
+			</div>
+		</div>
+	</section>
 {% endblock %}

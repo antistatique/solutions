@@ -1,5 +1,119 @@
 {% extends "layout.html" %}
 
-{% block content %}
-    E-Marketing.
+{% block slider %}
+    <div class="row slider">
+		<img src="images/emarketing-slide1.png" id='slide1' class="icon span4 show">
+		<img src="images/emarketing-slide2.png" id='slide2' class="icon span4 hide">
+		<img src="images/emarketing-slide3.png" id='slide3' class="icon span4 hide">
+		<div class="span6 offset5 headtext">
+			<h1>Une campagne marketing ayant pour terrain de jeu le Web &eacute;tant mesurable, adaptable et cibl&eacute;e.</h1>
+			<p class="lead">Chez Antistatique, nous vous proposons unestrat&eacute;gie e-marketing r&eacute;pondant &agrave; vos objectifs. <a href="#">En savoir plus</a></p>
+			<div class="button-ctr">
+				<a data-toggle="modal" href="#myModal" class="btn-primary big">DEMANDER UN DEVIS</a>
+			</div>
+		</div>
+		<div class="points">
+			<ul>
+				<li><a href="#" id="slide1" class="point active"><span>1</span></a></li>
+				<li><a href="#" id="slide2" class="point"><span>2</span></a></li>
+				<li><a href="#" id="slide3" class="point"><span>3</span></a></li>
+			</ul>
+		</div>
+	</div>
+{% endblock %}
+
+{% block mainblock %}
+    <section id="explication">
+		<div class="container center">
+			<div class="row">
+				<div class="span4">
+					<div class="rect">
+						<h2>OBJECTIF &amp; CONCEPT</h2>
+						<img src="http://placehold.it/350x200">
+						<p>Afin de mettre en place la strat&eacute;gie e-marketing, nous fixons des objectifs clairs et pr&eacute;cis. Mise en place d'un concept original afin d'atteindre vos objectifs.</p>
+					</div>
+				</div>
+				<div class="span4">
+					<div class="rect">
+						<h2>DIFFUSION &amp; LEVIER</h2>
+						<img src="http://placehold.it/350x200">
+						<p>Choisir les plateformes de diffusion (r&eacute;seaux sociaux, blogs, publicit&eacute; online&hellip;) et s'appuyer sur divers leviers (newsletter, banner, landing page, like/app facebook&hellip;) afin de promouvoir le concept mis en place.</p>
+					</div>
+				</div>
+				<div class="span4">
+					<div class="rect">
+						<h2>ANIMATION &amp; RESULTATS MESURABLES</h2>
+						<img src="http://placehold.it/350x200">
+						<p>Lors de la diffusion de la campagne e-marketing, cette derni&egrave;re doit &ecirc;tre anim&eacute;e. pr&ecirc;ter attention aux divers retours et r&eacute;agir en cons&eacute;quences. L'ensemble des actions sont mesurables et adaptables tout au long de la campagne. L'objectif &eacute;tant de calculer le succ&egrave;s de cette derni&egrave;re.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="examples">
+		<div class="container center">
+			<div class="examples center">
+				<ul>
+					<li class="example"><img src="images/uchitomi_logo.jpg"></li><li class="example"><img src="images/okado_logo.jpg"></li><li class="example"><img src="images/cuendet_logo.jpg"></li><li class="example"><img src="images/boky_logo.jpg"></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section id="interest">
+		<div class="container center">
+			<div class="row">
+				<div class="span12">
+					<div id="myModal2" class="modal hide fade" style="display: none; ">
+						<form class="form-horizontal">
+			        <div class="modal-header">
+			          <a class="close" data-dismiss="modal">&times;</a>
+			          <h3>Demander un devis</h3>
+			        </div>
+			        <div class="modal-body">
+			        	<fieldset>
+				        	<div class="control-group">
+				            <label class="control-label" for="input01">Nom</label>
+				            <div class="controls">
+				              <input type="text" class="input-xlarge" id="input01">
+				              <p class="help-block">Obligatoire!</p>
+				            </div>
+				          </div>
+				           <div class="control-group">
+				            <label class="control-label" for="input02">E-Mail</label>
+				            <div class="controls">
+				              <input type="text" class="input-xlarge" id="input02">
+				              <p class="help-block">Obligatoire!</p>
+				            </div>
+				          </div>
+				          <div class="control-group">
+				            <label class="control-label" for="input03">T&eacute;l&eacute;phone</label>
+				            <div class="controls">
+				              <input type="text" class="input-xlarge" id="input03">
+				            </div>
+				          </div>
+				          <div class="control-group">
+				            <label class="control-label" for="textarea">Message</label>
+				            <div class="controls">
+				              <textarea class="input-xlarge" id="textarea" rows="3"></textarea>
+				              <p class="help-block">Obligatoire!</p>
+				            </div>
+				          </div>
+			  				</fieldset>
+			        </div>
+			        <div class="modal-footer">
+			          <button type="submit" href="#" class="btn-primary btn small">Send</button>
+			        </div>
+			      </form>
+			    </div>    
+			  </div>
+			<div class="row">
+				<div class="span6 offset3 ctr">
+					<h2>Int&eacute;ress&eacute;?</h2>
+					<p class="info">Ou besoin de plus d&rsquo;informations ?</p>
+					<a data-toggle="modal" href="#myModal2" class="btn-primary">CLIQUEZ-ICI!</a>
+				</div>
+			</div>
+		</div>
+	</section>
 {% endblock %}
