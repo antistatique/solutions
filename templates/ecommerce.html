@@ -4,23 +4,33 @@
     
 {% endblock %}
 
-{% block body_class %}
-    eshop
-{% endblock %}
+{% block body_class %}eshop{% endblock %}
 
 {% block slider %}
     <div class="row slider">
-		<div class="span12 slide1">
-			<img src="images/eshop_title_1.png" id='slide1' class="icon span4 show">
-			<img src="images/eshop_title_2.png" id='slide2' class="icon span4 hide">
-			<img src="images/eshop_title_3.png" id='slide3' class="icon span4 hide">
-		</div>
-		<div class="span6 offset5 headtext">
-			<h1>Les e-shops c&rsquo;est monstre bien, on peut y acheter pleins de trucs avec sa carte de cr&eacute;dit !</h1>
-			<p class="lead">Antistatique.net s'applique &agrave; d&eacute;velopper des applications mobile multi-plateforme. <a href="#">En savoir plus</a></p>
-			<div class="button-ctr">
-				<a data-toggle="modal" href="#myModal" class="btn-primary big">DEMANDER UN DEVIS</a>
+		<div class="span12 slide active" id="slide1">
+			<img src="images/eshop_title_1.png" id='slide1' class="icon">
+			<div class="headtext slide1-text">
+				<h1>Le commerce électronique est aujourd'hui incontournable !</h1>
+				<p class="lead">Antistatique s'applique à développer une solution ecommerce à votre image.</p>
 			</div>
+		</div>
+		<div class="span12 slide" id="slide2">
+			<img src="images/eshop_title_2.png" id='slide2' class="icon">
+			<div class="headtext slide2-text">
+				<h1>Avec Magento la technique est enfin de votre coté !</h1>
+				<p class="lead">Sécurité des transactions, gestion des clients, CMS, etc. Tout est sous contrôle.</p>
+			</div>
+		</div>
+		<div class="span12 slide" id="slide3">
+			<img src="images/eshop_title_3.png" class="icon">
+			<div class="headtext slide3-text">
+				<h1>De la newsletter à une présence intelligente sur les réseaux sociaux en passant par la publicité traditionnelle.</h1>
+				<p class="lead">Antistatique vous conseille et vous guide dans la promotion de votre magasin en ligne.</p>
+			</div>
+		</div>
+		<div class="button-ctr">
+			<a data-toggle="modal" href="#myModal" class="btn-primary big">DEMANDER UN DEVIS</a>
 		</div>
 		<div class="points">
 			<ul>
