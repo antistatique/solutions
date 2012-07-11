@@ -28,8 +28,16 @@ $(document).ready(function() {
 	              });
 	    }
 	    slide();
+	} else if($('body').hasClass('eshop') ) {
+		$('.slider .point').click(function() {
+			var slide = $(this).attr('id');
+			console.log(slide);
+			$('.slider .slide').hide('slow').removeClass('active').filter('#'+slide).show('slow').addClass('active');
+			$('.point').removeClass('active');
+			$(this).addClass('active');
+		});
 	} else  {
-		console.log('emarketing & eshop');
+		console.log('emarketing');
 		var last = 'slide1';
 		
 		$('.slider .point').click(function() {
