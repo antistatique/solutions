@@ -1,0 +1,50 @@
+<form id="contactForm" name="contactForm" method="post" action="{{ app.url_generator.generate('contact') }}">
+    {{ form_row(form.name) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.phone) }}
+    {{ form_row(form.message) }}
+    <input type="submit" value="Envoyer" id="send" name="send">
+    {{ form_rest(form) }}
+</form>
+<!--
+<form class="form-horizontal">
+    <div class="modal-header">
+      <a class="close" data-dismiss="modal">&times;</a>
+      <h3>Demander un devis</h3>
+    </div>
+    <div class="modal-body">
+        <fieldset>
+            <div class="control-group">
+            <label class="control-label" for="input01">Nom</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="input01">
+              <p class="help-block">Obligatoire!</p>
+            </div>
+          </div>
+           <div class="control-group">
+            <label class="control-label" for="input02">E-Mail</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="input02">
+              <p class="help-block">Obligatoire!</p>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="input03">T&eacute;l&eacute;phone</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="input03">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="textarea">Message</label>
+            <div class="controls">
+              <textarea class="input-xlarge" id="textarea" rows="3"></textarea>
+              <p class="help-block">Obligatoire!</p>
+            </div>
+          </div>
+        </fieldset>
+    </div>
+    <div class="modal-footer">
+      <button type="submit" href="#" class="btn-primary btn small">Send</button>
+    </div>
+</form>
+-->
