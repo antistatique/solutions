@@ -12,6 +12,25 @@ $app->get('/', function () use ($app) {
 ->bind('homepage')
 ;
 
+$app->get('/ecommerce', function () use ($app) {
+    return $app['twig']->render('ecommerce.html', array());
+})
+->bind('ecommerce')
+;
+
+$app->get('/mobile', function () use ($app) {
+    return $app['twig']->render('mobile.html', array());
+})
+->bind('mobile')
+;
+
+$app->get('/emarketing', function () use ($app) {
+    return $app['twig']->render('emarketing.html', array());
+})
+->bind('emarketing')
+;
+
+
 $app->error(function (\Exception $e, $code) use ($app) {
     if ($app['debug']) {
         return;
