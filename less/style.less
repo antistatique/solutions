@@ -285,7 +285,6 @@ header{
 }
 
 .mobile header{
-
 	.icon{
 		top:0;
 		margin-top:0px;
@@ -371,6 +370,64 @@ header{
 .eshop #examples{
 	.span2 img{
 		margin: 0 0 10px 0;
+	}
+}
+
+.eshop header{
+	height: 300px;
+	.slider{
+		.button-ctr{
+			position: absolute;
+			left: 50%;
+			margin-left: -130px;
+			bottom: -185px;
+		}
+		.points{
+			bottom: -280px;
+		}
+	}
+}
+
+.eshop .slider .slide{
+	display: none;
+	position: relative;
+	top: -100px;
+	&.active{
+		display: block;
+	}
+
+	.slide1-text{
+		-webkit-transform: rotate(5deg); 
+		-moz-transform: rotate(5deg);	
+		-o-transform: rotate(5deg);
+		-ms-transform: rotate(5deg);
+		transform: rotate(5deg);
+		position: absolute;
+		right: 30px;
+		width: 500px;
+
+	}
+	.slide2-text{
+		-webkit-transform: rotate(-10deg); 
+		-moz-transform: rotate(-10deg);	
+		-o-transform: rotate(-10deg);
+		-ms-transform: rotate(-10deg);
+		transform: rotate(-10deg);
+		width: 500px;
+		position: absolute;
+		left: 130px;
+		top: 30px;
+	}
+	.slide3-text{
+		-webkit-transform: rotate(-8deg); 
+		-moz-transform: rotate(-8deg);	
+		-o-transform: rotate(-8deg);
+		-ms-transform: rotate(-8deg);
+		transform: rotate(-8deg);
+		width: 500px;
+		position: absolute;
+		right: 30px;
+		top: -50px;
 	}
 }
 
