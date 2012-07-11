@@ -36,8 +36,9 @@ $app->get('/', function () use ($app) {
 ->bind('homepage')
 ;
 
-$app->get('/ecommerce', function () use ($app) {
-    return $app['twig']->render('ecommerce.html', array());
+$app->get('/ecommerce', function () use ($app, $contactForm) {
+    $contactForm->setData(array('subject' => 'ecommerce'));
+    return $app['twig']->render('ecommerce.html', array('form' => $contactForm->createView()));
 })
 ->bind('ecommerce')
 ;
@@ -52,6 +53,25 @@ $app->get('/emarketing', function () use ($app) {
     return $app['twig']->render('emarketing.html', array());
 })
 ->bind('emarketing')
+;
+
+$app->post('contact', function (Request $request) use ($app, $contactForm) {
+
+    $contactForm->bindRequest($request);
+
+    if ($contactForm->isValid()) {
+        $data = $contactForm->getData();
+
+        // do something with the data
+
+        return $app->json(array('success' => true));
+    }
+
+    // return errors
+    $errors = $contactForm->getErrors();
+    return $app->json(array('success' => false, 'errors' => $errors));
+})
+->bind('contact')
 ;
 
 
