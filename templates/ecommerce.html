@@ -7,34 +7,50 @@
 {% block body_class %}eshop{% endblock %}
 
 {% block slider %}
-    <div class="row slider">
-		<div class="span12 slide active" id="slide1">
-			<img src="images/eshop_title_1.png" id='slide1' class="icon">
-			<div class="headtext slide1-text">
-				<h1>Le commerce électronique est aujourd'hui incontournable !</h1>
-				<p class="lead">Antistatique s'applique à développer une solution ecommerce à votre image.</p>
+    <div id="slider" class="row slider">
+    	<div class="scrollable">
+	    	<div class="items">
+				<div class="item" id="slide1">
+					<div class="image span5 offset1">
+						<img src="../images/panier1.png" class="icon">
+					</div>
+					<div class="span5 head-text ">
+						<h1>Le commerce électronique est aujourd'hui incontournable !</h1>
+						<p class="lead">Antistatique s'applique à développer une solution ecommerce à votre image.</p>
+						<div class="button-ctr">
+							<a data-toggle="modal" href="#myModal" class="btn-primary big">DEMANDER UN DEVIS</a>
+						</div>
+					</div>
+				</div>
+				<div class="item" id="slide2">
+					<div class="image span5 offset1">
+						<img src="../images/panier2.png" class="icon">
+					</div>
+					<div class="span5 head-text ">
+						<h1>Avec Magento la technique est enfin de votre coté !</h1>
+						<p class="lead">Sécurité des transactions, gestion des clients, CMS, etc. Tout est sous contrôle.</p>
+						<div class="button-ctr">
+							<a data-toggle="modal" href="#myModal" class="btn-primary big">DEMANDER UN DEVIS</a>
+						</div>
+					</div>
+				</div>
+				<div class="item" id="slide3">
+					<div class="image span5 offset1">
+						<img src="../images/panier3.png" class="icon">
+					</div>
+					<div class="span5 head-text ">
+						<h1>De la newsletter à une présence intelligente sur les réseaux sociaux en passant par la publicité traditionnelle.</h1>
+						<p class="lead">Antistatique vous conseille et vous guide dans la promotion de votre magasin en ligne.</p>
+						<div class="button-ctr">
+							<a data-toggle="modal" href="#myModal" class="btn-primary big">DEMANDER UN DEVIS</a>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
-		<div class="span12 slide" id="slide2">
-			<img src="images/eshop_title_2.png" id='slide2' class="icon">
-			<div class="headtext slide2-text">
-				<h1>Avec Magento la technique est enfin de votre coté !</h1>
-				<p class="lead">Sécurité des transactions, gestion des clients, CMS, etc. Tout est sous contrôle.</p>
-			</div>
-		</div>
-		<div class="span12 slide" id="slide3">
-			<img src="images/eshop_title_3.png" class="icon">
-			<div class="headtext slide3-text">
-				<h1>De la newsletter à une présence intelligente sur les réseaux sociaux en passant par la publicité traditionnelle.</h1>
-				<p class="lead">Antistatique vous conseille et vous guide dans la promotion de votre magasin en ligne.</p>
-			</div>
-		</div>
-		<div class="button-ctr">
-			<a data-toggle="modal" href="#myModal" class="btn-primary big">DEMANDER UN DEVIS</a>
 		</div>
 		<div class="points">
-			<ul>
-				<li><a href="#" id="slide1" class="point active"><span>1</span></a></li>
+			<ul class="slider-nav">
+				<li><a href="#" id="slide1" class="point"><span>1</span></a></li>
 				<li><a href="#" id="slide2" class="point"><span>2</span></a></li>
 				<li><a href="#" id="slide3" class="point"><span>3</span></a></li>
 			</ul>
@@ -73,8 +89,24 @@
 	<section id="examples">
 		<div class="container center">
 			<div class="row">
-				<div class="span8 offset1 main">
-					<a href="#" rel="popover" data-content="E-Shop pour le traiteur japonais Uchitomi" data-original-title="Uchitomi"><img src="images/uchitomi_big.jpg"></a>
+				<div class="span7 offset1 main">
+					<a href="#" rel="popover" data-content="E-Shop pour le traiteur japonais Uchitomi" data-original-title="Uchitomi"><img src="../images/uchitomi_big.jpg"></a>
+					<div class="text">
+						<h1>Uchitomi <small><a href="http://www.uchitomi.ch">www.uchitomi.ch</a></small></h1>
+<p>Uchitomi.ch est un site e-commerce permettant la réservation de sushis pour les magasins Uchitomi de Genève et Lausanne. Uchitomi.ch est un projet audacieux construit autour d'un univers japonais et ludique.</p>
+
+<h2>Notre méthodologie</h2>
+<p>Elle consiste en un travail par itération contenant des étapes d’analyse, d’architecture de l’information, de wireframe, de recherche, de tests utilisateurs, de réalisation graphique, d’intégration, de développement, de personnalisation et de test.
+Un travail ergonomique et graphique sur le cheminement de la réservation (Choix du retrait de la commande selon les horaires du magasin).</p>
+
+<p>Uchitomi.ch est un projet respectant les standards 2011. Les dernières technologies HTML5 et CSS3 sont présentes dans le site pour les animations. L'ergonomie a fait l'objet d'une étude approfondie. L'outil Magento a été personnalisé graphiquement et techniquement pour créer cet univers graphique et ludique.</p>
+
+<h2>Finalisation de la réservation</h2>
+<p>Dans un site ecommerce, les obstacles à la commande diminuent la conversion. Pour améliorer le processus de finalisation de la commande une page unique permet de s'authentifier, choisir le lieu de retrait et réserver.</p>
+
+<h2>Promotion</h2>
+<p>La newsletter est un média de communication précieux pour les e-commerçants. Pour être efficace, les destinataires doivent savoir pourquoi ils reçoivent des informations et comment se désinscrire. Une première newsletter a été envoyée à tous les contacts d'Uchitomi avec pour objectif : Nettoyer la liste et permettre au japanophone de recevoir une version dans leur langue.</p>
+					</div>
 				</div>
 				<div class="span2">
 					<img src="http://placehold.it/200x200">

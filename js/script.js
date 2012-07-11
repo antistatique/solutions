@@ -29,13 +29,11 @@ $(document).ready(function() {
 	    }
 	    slide();
 	} else if($('body').hasClass('eshop') ) {
-		$('.slider .point').click(function() {
-			var slide = $(this).attr('id');
-			console.log(slide);
-			$('.slider .slide').hide('slow').removeClass('active').filter('#'+slide).show('slow').addClass('active');
-			$('.point').removeClass('active');
-			$(this).addClass('active');
-		});
+		$(".slider .scrollable").scrollable({
+	      keyboard: true,
+	      circular: true,
+	      speed: 450
+	    }).navigator(".slider-nav");
 	} else  {
 		console.log('emarketing');
 		var last = 'slide1';

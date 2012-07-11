@@ -57,10 +57,6 @@ body{
 		margin: 0 auto;
 	}
 
-	.button-ctr{
-		text-align:center;
-	}
-
 	a{
 		color:#e83395;
 		&:hover{
@@ -90,6 +86,11 @@ body{
 		line-height: 26px;
 		color: #e83395;
 		font-weight: bold;
+	}
+
+	p{
+		font-size: 14px;
+		line-height: 22px;
 	}
 
 	.modal{
@@ -207,60 +208,62 @@ body{
 }
 
 header{
-	background: #ececec;
-	margin: 120px 0;
+	height: 440px;
 
 	.row{
-		padding: 30px 0;
 		position: relative;
 
 		.points{
-			position:absolute;
-			width:100%;
-			text-align:center;
-			bottom: -100px;
-			ul{
-				padding:0;
+			width: 100%;
+			position: relative;
+			overflow: hidden;
+			float: left;
+			height: 20px;
+			.slider-nav{
+				float: left;
+				text-align: center;
+				position: relative;
+				left: 50%;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
 				li{
-					display: inline;
+					display: block;
+					float: left;
+					position: relative;
+					right: 50%;
+					margin: 0 5px;
+					&.active a{
+						background: url('../images/points.png') 0 0 no-repeat;
+					}
 					a{
-						padding:10px 5px 2px 5px;
+						display: block;
+						padding: 10px;
 						background: url('../images/points.png') -20px 0 no-repeat;
-						span{
-							color:#fff;
-						}
 						&:hover, &:active, &.active{
 							background: url('../images/points.png') 0 0 no-repeat;
-							text-decoration:none;
+						}
+						span{
+							display: none;
 						}
 					}
 				}
 			}
-			//margin: -50px auto 0 auto;
 		}
 
-		.icon{
-			position:absolute;
-			top: -70px;
-			left: 40px;
-			width: 430px;
-			height:430px;
-		}
-
-		.headtext{
-			position:relative;
+		.head-text{
+			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			margin: 60px 0 0 -10px;
 
 			h1{
-				font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
-				font-size: 35px;
+				font-size: 28px;
 				margin-left:0px;
 				line-height: 38px;
 				color: #e83395;
 				font-weight: bold;
 			}
 			.lead{
-				font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
-				font-size: 17px;
+				font-size: 18px;
 				line-height: 24px;
 				margin-bottom:50px;
 				color: #515151;
@@ -268,20 +271,10 @@ header{
 			}
 
 			.button-ctr{
-				position:absolute;
-				width:100%;
 				padding-top:15px;
 			}
 		}
 	}
-}
-
-.eshop .icon{
-	position:absolute;
-	top: -100px !important;
-	left: 0;
-	width: 100% !important;
-	height:auto !important;
 }
 
 .mobile header{
@@ -373,61 +366,23 @@ header{
 	}
 }
 
-.eshop header{
-	height: 300px;
-	.slider{
-		.button-ctr{
-			position: absolute;
-			left: 50%;
-			margin-left: -130px;
-			bottom: -185px;
+.eshop .slider {
+	.scrollable{
+		overflow: hidden;
+		position: relative;
+		height: 440px;
+	}
+	.items{
+		position: absolute;
+		width: 2000em;
+	}
+	.item {
+		width: 1142px;
+		float: left;
+		position: relative;
+		&.active{
+			display: block;
 		}
-		.points{
-			bottom: -280px;
-		}
-	}
-}
-
-.eshop .slider .slide{
-	display: none;
-	position: relative;
-	top: -100px;
-	&.active{
-		display: block;
-	}
-
-	.slide1-text{
-		-webkit-transform: rotate(5deg); 
-		-moz-transform: rotate(5deg);	
-		-o-transform: rotate(5deg);
-		-ms-transform: rotate(5deg);
-		transform: rotate(5deg);
-		position: absolute;
-		right: 30px;
-		width: 500px;
-
-	}
-	.slide2-text{
-		-webkit-transform: rotate(-10deg); 
-		-moz-transform: rotate(-10deg);	
-		-o-transform: rotate(-10deg);
-		-ms-transform: rotate(-10deg);
-		transform: rotate(-10deg);
-		width: 500px;
-		position: absolute;
-		left: 130px;
-		top: 30px;
-	}
-	.slide3-text{
-		-webkit-transform: rotate(-8deg); 
-		-moz-transform: rotate(-8deg);	
-		-o-transform: rotate(-8deg);
-		-ms-transform: rotate(-8deg);
-		transform: rotate(-8deg);
-		width: 500px;
-		position: absolute;
-		right: 30px;
-		top: -50px;
 	}
 }
 
@@ -442,6 +397,9 @@ header{
 
 		h2{
 			position:absolute;
+			font-size: 20px;
+			font-weight: bold;
+			font-family: "Helvetica", Arial, sans-serif;
 		}
 		
 		img{
