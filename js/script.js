@@ -29,11 +29,25 @@ $(document).ready(function() {
 	    }
 	    slide();
 	} else if($('body').hasClass('eshop') ) {
+
 		$(".slider .scrollable").scrollable({
 	      keyboard: true,
 	      circular: true,
 	      speed: 450
 	    }).navigator(".slider-nav");
+
+		$('#examples .example-nav-elem').click(function() {
+			
+			var elem = $(this).attr('href');
+			$('.example-nav-elem').parent().removeClass('active');
+			$(this).parent().addClass('active');
+			$('.example-slide').animate({opacity: 0}, 500, function() {
+				$(this).removeClass('active').filter('#'+elem).addClass('active').animate({opacity: 1}, 500, function() {});
+			});
+		})
+
+
+
 	} else  {
 		console.log('emarketing');
 		var last = 'slide1';
