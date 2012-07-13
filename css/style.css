@@ -4,9 +4,6 @@ body {
 body .center {
   margin: 0 auto;
 }
-body .button-ctr {
-  text-align: center;
-}
 body a {
   color: #e83395;
 }
@@ -25,6 +22,9 @@ body input {
 body form {
   margin: 0;
 }
+body h1 {
+  font-size: 40px;
+}
 body h2 {
   font-size: 17px;
   margin-left: 0px;
@@ -32,6 +32,10 @@ body h2 {
   line-height: 26px;
   color: #e83395;
   font-weight: bold;
+}
+body p {
+  font-size: 14px;
+  line-height: 22px;
 }
 body .modal {
   height: auto;
@@ -150,75 +154,70 @@ body a.btn-primary.small {
   background: none;
 }
 header {
-  background: #ececec;
-  margin: 120px 0;
+  height: 440px;
 }
 header .row {
-  padding: 30px 0;
   position: relative;
 }
 header .row .points {
-  position: absolute;
   width: 100%;
-  text-align: center;
-  bottom: -100px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  height: 20px;
 }
-header .row .points ul {
+header .row .points .slider-nav {
+  float: left;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  list-style-type: none;
+  margin: 0;
   padding: 0;
 }
-header .row .points ul li {
-  display: inline;
+header .row .points .slider-nav li {
+  display: block;
+  float: left;
+  position: relative;
+  right: 50%;
+  margin: 0 5px;
 }
-header .row .points ul li a {
-  padding: 10px 5px 2px 5px;
+header .row .points .slider-nav li.active a {
+  background: url('../images/points.png') 0 0 no-repeat;
+}
+header .row .points .slider-nav li a {
+  display: block;
+  padding: 10px;
   background: url('../images/points.png') -20px 0 no-repeat;
 }
-header .row .points ul li a span {
-  color: #fff;
-}
-header .row .points ul li a:hover,
-header .row .points ul li a:active,
-header .row .points ul li a.active {
+header .row .points .slider-nav li a:hover,
+header .row .points .slider-nav li a:active,
+header .row .points .slider-nav li a.active {
   background: url('../images/points.png') 0 0 no-repeat;
-  text-decoration: none;
 }
-header .row .icon {
-  position: absolute;
-  top: -70px;
-  left: 40px;
-  width: 430px;
-  height: 430px;
+header .row .points .slider-nav li a span {
+  display: none;
 }
-header .row .headtext {
-  position: relative;
-}
-header .row .headtext h1 {
+header .row .head-text {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 35px;
+  margin: 60px 0 0 -10px;
+}
+header .row .head-text h1 {
+  font-size: 28px;
   margin-left: 0px;
   line-height: 38px;
   color: #e83395;
   font-weight: bold;
 }
-header .row .headtext .lead {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 17px;
+header .row .head-text .lead {
+  font-size: 18px;
   line-height: 24px;
   margin-bottom: 50px;
   color: #515151;
   font-weight: bold;
 }
-header .row .headtext .button-ctr {
-  position: absolute;
-  width: 100%;
+header .row .head-text .button-ctr {
   padding-top: 15px;
-}
-.eshop .icon {
-  position: absolute;
-  top: -100px !important;
-  left: 0;
-  width: 100% !important;
-  height: auto !important;
 }
 .mobile header .icon {
   top: 0;
@@ -289,24 +288,50 @@ header .row .headtext .button-ctr {
   color: #686868;
 }
 .mobile #examples {
-  background: url('../images/gradientup.jpg') center top no-repeat;
   padding: 80px 0 0 0;
 }
-.eshop #examples .span2 img {
-  margin: 0 0 10px 0;
+.eshop #examples .text h1 {
+  margin-top: 0px;
+  font-size: 28px;
+}
+.eshop #examples p {
+  line-height: 20px;
+}
+.eshop .slider .scrollable {
+  overflow: hidden;
+  position: relative;
+  height: 440px;
+}
+.eshop .slider .items {
+  position: absolute;
+  width: 2000em;
+}
+.eshop .slider .item {
+  width: 1142px;
+  float: left;
+  position: relative;
+}
+.eshop .slider .item.active {
+  display: block;
 }
 #explication {
-  margin: 70px 0;
+  margin: 60px 0;
+  padding: 30px 0;
+  background-color: #f5f5f5;
 }
 #explication .rect {
-  height: 500px;
+  /*height: 500px;*/
+
   position: relative;
-  background-color: #f5f5f5;
-  border: 1px solid #cfcfcf;
   padding: 20px;
 }
 #explication .rect h2 {
-  position: absolute;
+  /*position:absolute;*/
+
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Helvetica", Arial, sans-serif;
+  margin-bottom: 0.4em;
 }
 #explication .rect img {
   margin-top: 50px;
@@ -319,7 +344,54 @@ header .row .headtext .button-ctr {
   color: #686868;
 }
 #examples {
-  margin: 80px 0 70px 0;
+  margin: 0 0 60px 0;
+}
+#examples .container {
+  border-top: 1px solid #f5f5f5;
+  padding-top: 60px;
+}
+#examples .example-nav {
+  float: left;
+  clear: left;
+  position: relative;
+  height: 105px;
+  margin-top: 60px;
+  width: 100%;
+}
+#examples .example-nav .example-list {
+  list-style-type: none;
+  text-align: center;
+  float: left;
+  position: relative;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+}
+#examples .example-nav .example-list li {
+  float: left;
+  margin: 0 40px;
+  right: 50%;
+  position: relative;
+}
+#examples .example-nav .example-list li.active a {
+  color: #e83395;
+}
+#examples .example-nav .example-list a {
+  font-size: 28px;
+  color: #333333;
+}
+#examples .example-nav .example-list a small {
+  font-size: 18px;
+}
+#examples .example-nav .example-list a:hover {
+  color: #e83395;
+  text-decoration: none;
+}
+#examples .example-slide {
+  display: none;
+}
+#examples .example-slide.active {
+  display: block;
 }
 #examples .examples {
   width: 80%;
@@ -341,20 +413,24 @@ header .row .headtext .button-ctr {
   max-width: 100%;
 }
 #interest {
-  padding: 100px 0 70px;
-  background: url('../images/gradientdown.jpg') no-repeat center top;
+  padding: 0 0 60px;
+}
+#interest .container {
+  padding-top: 60px;
+  border-top: 1px solid #f5f5f5;
 }
 #interest .ctr {
   text-align: center;
 }
 #interest .ctr h2 {
   font-size: 60px;
+  margin-bottom: 20px;
 }
 #interest .ctr p.info {
   color: #515151;
   font-weight: bold;
   font-size: 18px;
-  margin: 20px 20px 30px 20px;
+  margin: 0px 20px 30px 20px;
 }
 footer {
   height: 180px;

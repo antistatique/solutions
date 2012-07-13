@@ -1,6 +1,7 @@
 /vendor/
 /cache/
 silex.log
+.DS_Store
 
 
 composer.phar
