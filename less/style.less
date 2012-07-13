@@ -214,67 +214,68 @@ header{
 
     .row{
         position: relative;
+    }
 
-        .points{
-            width: 100%;
-            position: relative;
-            overflow: hidden;
-            float: left;
-            height: 20px;
-            .slider-nav{
-                float: left;
-                text-align: center;
-                position: relative;
-                left: 50%;
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                li{
-                    display: block;
-                    float: left;
-                    position: relative;
-                    right: 50%;
-                    margin: 0 5px;
-                    &.active a{
-                        background: url('../images/points.png') 0 0 no-repeat;
-                    }
-                    a{
-                        display: block;
-                        padding: 10px;
-                        background: url('../images/points.png') -20px 0 no-repeat;
-                        &:hover, &:active, &.active{
-                            background: url('../images/points.png') 0 0 no-repeat;
-                        }
-                        span{
-                            display: none;
-                        }
-                    }
-                }
-            }
+    .points{
+       width: 100%;
+       position: relative;
+       overflow: hidden;
+       float: left;
+       height: 20px;
+       .slider-nav{
+           float: left;
+           text-align: center;
+           position: relative;
+           left: 50%;
+           list-style-type: none;
+           margin: 0;
+           padding: 0;
+        }
+        li{
+           display: block;
+           float: left;
+           position: relative;
+           right: 50%;
+           margin: 0 5px;
+           &.active a{
+               background: url('../images/points.png') 0 0 no-repeat;
+           }
+           a{
+               display: block;
+               padding: 10px;
+               background: url('../images/points.png') -20px 0 no-repeat;
+               &:hover, &:active, &.active{
+                   background: url('../images/points.png') 0 0 no-repeat;
+               }
+               span{
+                   display: none;
+               }
+           }
+        }
+    }
+    
+
+    .head-text{
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        margin: 60px 0 0 -10px;
+
+        h1{
+            font-size: 28px;
+            margin-left:0px;
+            line-height: 38px;
+            color: #e83395;
+            font-weight: bold;
+        }
+        .lead{
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom:50px;
+            color: #515151;
+            font-weight: bold;
         }
 
-        .head-text{
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            margin: 60px 0 0 -10px;
-
-            h1{
-                font-size: 28px;
-                margin-left:0px;
-                line-height: 38px;
-                color: #e83395;
-                font-weight: bold;
-            }
-            .lead{
-                font-size: 18px;
-                line-height: 24px;
-                margin-bottom:50px;
-                color: #515151;
-                font-weight: bold;
-            }
-
-            .button-ctr{
-                padding-top:15px;
-            }
+        .button-ctr{
+            padding-top:15px;
         }
     }
 }
@@ -427,6 +428,12 @@ header{
 
 #examples{
     margin: 0 0 60px 0;
+
+    h1{
+        text-align: center;
+        color: #e83395;
+    }
+
     .container{
         border-top: 1px solid #f5f5f5;
         padding-top: 60px;
@@ -438,37 +445,47 @@ header{
         height: 105px;
         margin-top: 60px;
         width: 100%;
-        .example-list{
-            list-style-type: none;
-            text-align: center;
-            float: left;
-            position: relative;
-            left: 50%;
-            margin: 0;
-            padding: 0;
-            li{
-                float: left;
-                margin: 0 40px;
-                right: 50%;
-                position: relative;
-                &.active a{
-                    color: #e83395;
-                }
-            }
-            a{
-                font-size: 28px;
-                color: #333333;
-                small{
-                    font-size: 18px;
-                }
-                &:hover{
-                    color: #e83395;
-                    text-decoration: none;
-                }
-            }
-            
+        overflow: hidden;
+    }
+
+    .example-list{
+        list-style-type: none;
+        text-align: center;
+        float: left;
+        position: relative;
+        left: 50%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    li{
+        float: left;
+        margin: 0 40px;
+        right: 50%;
+        position: relative;
+        &.active a{
+            color: #e83395;
         }
     }
+    
+    a{
+        font-size: 28px;
+        color: #333333;
+        small{
+            font-size: 18px;
+        }
+        &:hover{
+            color: #e83395;
+            text-decoration: none;
+        }
+    }
+
+    .image > img{
+        max-width: 100%;
+    }
+    
+    
+    
     .example-slide{
         display: none;
         &.active{
@@ -540,6 +557,10 @@ footer{
 }
 
 @media (max-width: 480px) {
+    body a.btn-primary.big{
+        padding: 15px 20px;
+        font-size: 14px;
+    }
     #examples .examples .example{
         width:100% !important;
     }
@@ -559,19 +580,34 @@ footer{
         }
     }
 
-    .eshop #examples{
-        .span8, .span2{
-            margin:10px 0;
-            text-align:center;
+    #examples{
+        .text{
+            margin-top: 25px;
         }
-        .span8{
-            img{
-                max-width:200px;
-            }
+
+        h1{
+            line-height: 32px;
+            text-align: left;
         }
-        .span2{
-            img{
-                margin: 10px;
+        .example-nav{
+            height: auto;
+            margin: 20px 0;
+        }
+        .example-list{
+            left: 0;
+            display: block;
+        }
+        li{
+            right: 0;
+            margin: 8px 20px;
+            text-align: left;
+            a{
+                display: inline;
+                font-size: 22px;
+                small{
+                    font-size: 16px;
+                    display: inline;
+                }
             }
         }
     }
@@ -605,33 +641,21 @@ footer{
     }
     
     header{
-        .points{
-            display:none;
-        }
-        margin: 40px 0;
-        .row .headtext {
+        .head-text{
+            width: 240px;
+            margin: 0 0 0 20px;
             h1{
                 font-size: 22px;
-                line-height:26px;
+                line-height: 30px;
             }
-            .lead{
-                font-size:14px;
-            }
-            .button-ctr{
-                padding-top:0;
-                a.btn-primary.big{
-                    font-size: 14px;
-                    padding: 15px;
-                }       
+            p{
+                font-size: 16px;
             }
         }
-        .row {
-            padding:0;
-            .icon{
-                display:none;
-            }
+
+        .image{
+            display: none;
         }
-        
     }
 
     #interest .ctr h2{
@@ -645,107 +669,43 @@ footer{
 }
 
 @media (min-width: 480px) and (max-width: 980px) {
-    .row{
-        margin-left:0;
-    }
-    .rect{
-        height:auto;
-    }
-
     .navbar .navbar-inner{
-        height:auto;
+        height: auto;
         .brand .logohead{
-            height: 50px;
-            margin: 10px 10px;
-        }
-        .btn-navbar{
-            margin: 25px;
+            height: 40px;
+            margin:10px 10px;
         }
         .menu{
+            padding:0 20px;
+            display: block;
+            list-style-type:none;
             li{
-                padding: 10px;
+                display: inline;
                 &.active {
-                    background: none;
-                }
-            }
-        }
-    }
-
-    .example{
-        width:50% !important;
-    }
-
-    .mobile #examples{
-        .span6{
-            width:45%;
-            float:left;
-            margin:auto 2.5%;
-            padding:0;
-            .span6{
-                width:100%;
-            }
-        }
-    }
-
-    .mobile #explication{
-        .span4{
-            h2{
-                padding-top:10px;
-            }
-            clear:both;
-            img{
-                float:left;
-            }
-        }
-    }
-
-    #explication{
-        .span4{
-            width:100%;
-            .rect {
-                float:left;
-                width:90%;
-                height:auto !important;
-                position:relative;
-                img{
-                    float:left;
-                    margin-right:15px;
-                }
-                p{
-                    margin:50px 0;
+                    background:none;
                 }
             }
         }
     }
 
     header{
-        .row .headtext {
+        .head-text{
             h1{
-                font-size:25px;
-                line-height:27px;
+                font-size: 22px;
+                line-height: 30px;
             }
-            .lead{
-                font-size:16px;
+            p{
+                font-size: 16px;
             }
         }
-        margin: 40px 0;
 
-        .row .icon{
-            display:none;
+        .icon{
+            margin-top: 60px;
         }
-
-        button.big{
-            font-size: 15px;
-            padding: 16px;
-        }
-    }
-
-    .rect{
-        margin: 20px auto;
     }
 }
 
-@media (min-width: 480px) and (max-width:769px) {
+@media (min-width: 480px) and (max-width:768px) {
     .navbar .navbar-inner{
         .menu{
             padding:0 20px;
@@ -760,72 +720,86 @@ footer{
             }
         }
     }
-    header{
-        .points{
-            display:none;
+    header {
+        height: 440px;
+        .image{
+            display: none;
         }
-        .row .headtext {
-            h1{
-                font-size: 22px;
-                line-height:26px;
-            }
-            .lead{
-                font-size:14px;
-            }
-            .button-ctr{
-                padding-top:0;
-                a.btn-primary.big{
-                    font-size: 14px;
-                    padding: 15px;
-                }       
-            }
-        }
-        .row {
-            padding:0;
+        .head-text{
+            margin: 60px 0 0 20px;
         }
     }
-    .rect{
-        p{
-            margin:0 !important;
-            padding:10px 0;
-            clear:both;
+    #examples{
+        .example-nav{
+            height: 130px;
         }
-    }
+        .text{
+            margin: 25px auto 0 auto;
+            width: 80%;
+        }
 
-    
-    .eshop #examples{
-        .span2{
-            text-align:center;
-            img{
-                margin:10px;
+        li{
+            margin: 5px 0;
+            width: 50%;
+            right: auto;
+            a{
+                font-size: 24px;
+                span{
+                    font-size: 16px;
+                }
             }
+        }
+
+        .example-list{
+            left: 0;
+        }
+    }
+    .text{
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 660px) and (max-width:768px) {
+    header {
+        .image{
+            display: block;
         }
     }
 }
 
-@media (min-width: 769px) and (max-width:980px) {
-    .navbar .navbar-inner{
-        .brand .logohead{
-            margin: 10px 0 10px 10px;
+@media (min-width: 768px) and (max-width: 960px) {
+
+
+    .eshop .slider {
+        .scrollable{
+            height: 480px;
         }
-        .menu{
-            padding: 0 0 10px 20px;
-            li{
-                padding: 0px;
+    }
+
+    #examples{
+        .example-nav{
+            height: 140px;
+        }
+        .text{
+            margin-top: 25px;
+        }
+        .image{
+            text-align: center;
+        }
+
+        li{
+            margin: 8px 0;
+            width: 50%;
+            a{
+                font-size: 24px;
+                span{
+                    font-size: 16px;
+                }
             }
         }
     }
     header{
-        .row .icon{
-            &.hide{
-                display:none;
-            }
-            top:20px;
-            left:20px;
-            width: 280px;
-            height:280px;
-            max-width:100%;
-        }
+        height: 480px;
     }
 
     .mobile header{
@@ -836,20 +810,18 @@ footer{
     }
 }
 
-@media (min-width: 980px) and (max-width:1200px) {
-    .navbar .navbar-inner{
-        .brand .logohead{
-            margin: 75px 0 0 10px;
-        }
-    }
+@media (min-width: 960px) and (max-width:1200px) {
 
     header{
-        .row .icon{
-            top:10px;
-            left:20px;
-            width: 330px;
-            height:330px;
-            max-width:100%;
+        height: 500px;
+    }
+
+    .eshop .slider {
+        .scrollable{
+            height: 500px;
+        }
+        .item{
+            width: 980px;
         }
     }
 }
